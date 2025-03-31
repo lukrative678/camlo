@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAMLO INDUSTRIES - Metallic Animated Logo</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f5f5f5;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+        }
+
+        .logo-container {
+            text-align: center;
+            margin-top: -20px;
+        }
+
+        .logo {
+            position: relative;
+            width: 500px;
+            height: 320px;
+            margin: 0 auto;
+        }
+
+        .outer-seal {
+            position: absolute;
+            width: 240px;
+            height: 240px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #5e8cc9, #235aa6, #183b6c);
+            border: 5px solid #183b6c;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        .inner-seal {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background-color: #183b6c;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            overflow: hidden;
+        }
+
+        .central-seal {
+            position: absolute;
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #5e8cc9, #235aa6, #183b6c);
+            border: 4px solid #102848;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .inner-core {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: #102848;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .gold-liquid {
+            position: absolute;
+            width: 320px;
+            height: 320px;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            filter: blur(3px);
+            opacity: 0.85;
+            z-index: 5;
+        }
+
+        .gold-drop {
+            position: absolute;
+            background: linear-gradient(135deg, #f7d571, #e6b800, #c99700);
+            border-radius: 50%;
+            filter: blur(2px);
+            animation: flow 12s linear infinite;
+        }
+
+        .gold-drop:nth-child(1) {
+            width: 80px;
+            height: 80px;
+            left: 20%;
+            top: 10%;
+            animation-delay: 0s;
+        }
+
+        .gold-drop:nth-child(2) {
+            width: 100px;
+            height: 100px;
+            left: 70%;
+            top: 20%;
+            animation-delay: -2s;
+        }
+
+        .gold-drop:nth-child(3) {
+            width: 90px;
+            height: 90px;
+            left: 15%;
+            top: 60%;
+            animation-delay: -4s;
+        }
+
+        .gold-drop:nth-child(4) {
+            width: 110px;
+            height: 110px;
+            left: 65%;
+            top: 70%;
+            animation-delay: -6s;
+        }
+
+        .gold-drop:nth-child(5) {
+            width: 70px;
+            height: 70px;
+            left: 40%;
+            top: 85%;
+            animation-delay: -8s;
+        }
+
+        .gold-drop:nth-child(6) {
+            width: 60px;
+            height: 60px;
+            left: 80%;
+            top: 45%;
+            animation-delay: -10s;
+        }
+
+        @keyframes flow {
+            0% {
+                transform: rotate(0deg) translateX(60px) rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg) translateX(60px) rotate(-360deg);
+            }
+        }
+
+        .seal-highlight {
+            position: absolute;
+            width: 160px;
+            height: 80px;
+            border-radius: 80px 80px 0 0;
+            background: linear-gradient(to bottom, rgba(255,255,255,0.7), rgba(255,255,255,0));
+            left: 50%;
+            top: 20%;
+            transform: translate(-50%, -50%);
+            opacity: 0.4;
+            animation: shimmer 8s ease-in-out infinite;
+        }
+
+        @keyframes shimmer {
+            0%, 100% {
+                opacity: 0.4;
+                transform: translate(-50%, -50%) rotate(0deg);
+            }
+            50% {
+                opacity: 0.6;
+                transform: translate(-50%, -50%) rotate(30deg);
+            }
+        }
+
+        .company-name {
+            font-size: 42px;
+            font-weight: bold;
+            color: #183b6c;
+            margin-top: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            animation: fade-in 1.5s ease-in-out forwards 0.5s, shimmer-text 8s ease-in-out infinite 2s;
+            opacity: 0;
+        }
+
+        .tagline {
+            font-size: 18px;
+            color: #666666;
+            margin-top: 5px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            animation: fade-in 1.5s ease-in-out forwards 1s;
+            opacity: 0;
+        }
+
+        @keyframes fade-in {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes shimmer-text {
+            0%, 100% {
+                text-shadow: 0 0 5px rgba(24, 59, 108, 0.1);
+            }
+            50% {
+                text-shadow: 0 0 10px rgba(24, 59, 108, 0.3);
+            }
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 600px) {
+            .logo {
+                width: 320px;
+                height: 240px;
+            }
+
+            .outer-seal {
+                width: 180px;
+                height: 180px;
+            }
+
+            .inner-seal {
+                width: 150px;
+                height: 150px;
+            }
+
+            .central-seal {
+                width: 100px;
+                height: 100px;
+            }
+
+            .inner-core {
+                width: 70px;
+                height: 70px;
+            }
+
+            .company-name {
+                font-size: 28px;
+            }
+
+            .tagline {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="logo-container">
+        <div class="logo">
+            <div class="outer-seal"></div>
+            <div class="inner-seal"></div>
+            <div class="central-seal"></div>
+            <div class="inner-core"></div>
+            <div class="gold-liquid">
+                <div class="gold-drop"></div>
+                <div class="gold-drop"></div>
+                <div class="gold-drop"></div>
+                <div class="gold-drop"></div>
+                <div class="gold-drop"></div>
+                <div class="gold-drop"></div>
+            </div>
+            <div class="seal-highlight"></div>
+        </div>
+        <div class="company-name">CAMLO INDUSTRIES</div>
+        <div class="tagline">PRECISION SEALING SOLUTIONS</div>
+    </div>
+</body>
+</html>

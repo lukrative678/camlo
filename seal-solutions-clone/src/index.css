@@ -1,0 +1,74 @@
+@import url('./assets/fonts.css');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 248, 247, 239;
+  --background-end-rgb: 255, 255, 255;
+}
+
+body {
+  font-family: 'MyriadPro', sans-serif;
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+    to bottom,
+    rgb(var(--background-start-rgb)),
+    rgb(var(--background-end-rgb))
+  );
+}
+
+/* Custom Classes */
+.container-custom {
+  @apply container mx-auto px-4 md:px-6;
+}
+
+.top-header {
+  @apply bg-primary text-white py-2;
+}
+
+.main-header {
+  @apply bg-white py-4;
+}
+
+.main-nav {
+  @apply bg-secondary text-white;
+}
+
+.footer {
+  @apply bg-footer text-white py-8;
+}
+
+.product-card {
+  @apply bg-white p-4 rounded-lg shadow-md;
+}
+
+.btn-primary {
+  @apply bg-primary text-white px-4 py-2 rounded hover:bg-primary-dark transition-colors;
+}
+
+.btn-secondary {
+  @apply bg-secondary text-white px-4 py-2 rounded hover:bg-gray-800 transition-colors;
+}
+
+.section-title {
+  @apply text-2xl md:text-3xl font-bold mb-6 text-center;
+}
+
+.machine-category {
+  @apply text-center;
+}
+
+.machine-category-image {
+  @apply rounded-full w-24 h-24 md:w-32 md:h-32 object-cover mx-auto mb-2;
+}
+
+.machine-category-label {
+  @apply bg-accent text-white py-1 px-4 text-sm uppercase font-semibold;
+}
+
+/* Form styles */
+.form-input {
+  @apply bg-gray-700 border border-gray-600 text-white rounded py-2 px-3 w-full focus:outline-none focus:ring-1 focus:ring-primary;
+}

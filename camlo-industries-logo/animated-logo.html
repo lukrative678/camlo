@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAMLO INDUSTRIES - Animated Logo</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #202022;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+        }
+
+        .logo-container {
+            text-align: center;
+            margin-top: -50px;
+        }
+
+        .logo {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            margin: 0 auto;
+        }
+
+        .gear-left {
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            left: 25px;
+            top: 75px;
+            animation: rotate-left 20s linear infinite;
+            transform-origin: center;
+        }
+
+        .gear-right {
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            right: 25px;
+            top: 75px;
+            animation: rotate-right 20s linear infinite;
+            transform-origin: center;
+        }
+
+        .wrench {
+            position: absolute;
+            width: 40px;
+            height: 120px;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%) rotate(45deg);
+            z-index: 10;
+        }
+
+        @keyframes rotate-left {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes rotate-right {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(-360deg);
+            }
+        }
+
+        .company-name {
+            font-size: 48px;
+            font-weight: bold;
+            color: #e74c3c;
+            margin-top: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            opacity: 0;
+            animation: fade-in 1.5s ease-in-out forwards 1s;
+        }
+
+        .tagline {
+            font-size: 18px;
+            color: #d6d6d6;
+            margin-top: 10px;
+            letter-spacing: 1px;
+            opacity: 0;
+            animation: fade-in 1.5s ease-in-out forwards 1.5s;
+        }
+
+        @keyframes fade-in {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 600px) {
+            .logo {
+                width: 200px;
+                height: 200px;
+            }
+
+            .company-name {
+                font-size: 32px;
+            }
+
+            .tagline {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="logo-container">
+        <div class="logo">
+            <svg class="gear-left" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <!-- Gear Teeth -->
+                <path d="M50,10
+                       L45,20 L35,15 L35,30 L25,35 L20,25 L10,35 L20,45
+                       L15,55 L5,50 L5,65 L15,70 L10,80 L25,85 L30,75
+                       L40,80 L35,90 L50,95 L65,90 L60,80 L70,75 L80,85
+                       L85,75 L95,80 L90,65 L95,55 L85,50 L90,35 L80,30
+                       L85,20 L75,15 L65,25 L55,15 Z"
+                     fill="#d6d6d6" />
+
+                <!-- Gear Circle -->
+                <circle cx="50" cy="50" r="20" fill="#202022" stroke="#d6d6d6" stroke-width="5" />
+            </svg>
+
+            <svg class="gear-right" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <!-- Gear Teeth -->
+                <path d="M50,10
+                       L45,20 L35,15 L35,30 L25,35 L20,25 L10,35 L20,45
+                       L15,55 L5,50 L5,65 L15,70 L10,80 L25,85 L30,75
+                       L40,80 L35,90 L50,95 L65,90 L60,80 L70,75 L80,85
+                       L85,75 L95,80 L90,65 L95,55 L85,50 L90,35 L80,30
+                       L85,20 L75,15 L65,25 L55,15 Z"
+                     fill="#e74c3c" />
+
+                <!-- Gear Circle -->
+                <circle cx="50" cy="50" r="20" fill="#202022" stroke="#e74c3c" stroke-width="5" />
+            </svg>
+
+            <svg class="wrench" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <path d="M30,5
+                       L70,5 L70,30 L95,30 L95,70 L70,70
+                       L70,95 L30,95 L30,70 L5,70 L5,30 L30,30 Z"
+                     fill="#ffffff" />
+            </svg>
+        </div>
+        <div class="company-name">CAMLO INDUSTRIES</div>
+        <div class="tagline">ENGINEERING EXCELLENCE</div>
+    </div>
+</body>
+</html>

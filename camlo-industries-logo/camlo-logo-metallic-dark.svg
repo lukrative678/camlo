@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="600" height="420" viewBox="0 0 600 420" xmlns="http://www.w3.org/2000/svg">
+  <!-- Dark Background -->
+  <rect width="600" height="420" fill="#0d1620"/>
+
+  <!-- Definitions for gradients -->
+  <defs>
+    <!-- Metallic Blue Gradient - Enhanced for dark bg -->
+    <linearGradient id="metallic-blue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7eacf9" />
+      <stop offset="50%" stop-color="#235aa6" />
+      <stop offset="100%" stop-color="#183b6c" />
+    </linearGradient>
+
+    <!-- Gold Liquid Gradient - Enhanced for dark bg -->
+    <linearGradient id="gold-liquid" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fbe391" />
+      <stop offset="50%" stop-color="#e6b800" />
+      <stop offset="100%" stop-color="#c99700" />
+    </linearGradient>
+
+    <!-- Metallic Reflection - Enhanced for dark bg -->
+    <linearGradient id="metallic-highlight" x1="30%" y1="0%" x2="70%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.8" />
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.2" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.4" />
+    </linearGradient>
+  </defs>
+
+  <!-- Outer Seal Ring -->
+  <circle cx="300" cy="160" r="120" fill="url(#metallic-blue)" stroke="#183b6c" stroke-width="5"/>
+
+  <!-- Inner Seal Ring -->
+  <circle cx="300" cy="160" r="100" fill="#183b6c" stroke="url(#metallic-highlight)" stroke-width="2"/>
+
+  <!-- Gold Liquid Flowing Around Seal -->
+  <path d="M300,60
+           C360,60 400,110 430,160
+           C400,210 360,260 300,260
+           C240,260 200,210 170,160
+           C200,110 240,60 300,60
+           Z"
+        fill="url(#gold-liquid)" opacity="0.9"/>
+
+  <!-- Seal Inner Details -->
+  <circle cx="300" cy="160" r="70" fill="url(#metallic-blue)" stroke="#102848" stroke-width="4"/>
+  <circle cx="300" cy="160" r="50" fill="#102848" stroke="url(#metallic-highlight)" stroke-width="1"/>
+
+  <!-- Seal Edge Highlight -->
+  <path d="M380,160
+           A80,80 0 0,0 300,80
+           A80,80 0 0,0 220,160"
+        fill="none" stroke="url(#metallic-highlight)" stroke-width="4" opacity="0.7"/>
+
+  <!-- Company Name -->
+  <text x="300" y="340" font-family="Arial, sans-serif" font-size="42" font-weight="bold"
+        text-anchor="middle" fill="#e6b800">CAMLO INDUSTRIES</text>
+
+  <!-- Tagline -->
+  <text x="300" y="375" font-family="Arial, sans-serif" font-size="18"
+        text-anchor="middle" fill="#ffffff">PRECISION SEALING SOLUTIONS</text>
+</svg>

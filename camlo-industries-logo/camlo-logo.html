@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAMLO INDUSTRIES Logo</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #202022;
+            font-family: Arial, sans-serif;
+        }
+
+        .logo-container {
+            text-align: center;
+        }
+
+        .logo {
+            position: relative;
+            width: 300px;
+            height: 300px;
+            margin: 0 auto;
+        }
+
+        .gear-left {
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 15px solid #d6d6d6;
+            left: 25px;
+            top: 75px;
+        }
+
+        .gear-left:before {
+            content: '';
+            position: absolute;
+            width: 180px;
+            height: 180px;
+            top: -15px;
+            left: -15px;
+            border-radius: 50%;
+            box-sizing: border-box;
+            border: 15px dashed #d6d6d6;
+            border-style: solid;
+            clip-path: polygon(
+                0 40%, 10% 40%, 20% 0, 30% 40%, 40% 40%, 50% 0,
+                60% 40%, 70% 40%, 80% 0, 90% 40%, 100% 40%, 100% 60%,
+                90% 60%, 80% 100%, 70% 60%, 60% 60%, 50% 100%,
+                40% 60%, 30% 60%, 20% 100%, 10% 60%, 0 60%
+            );
+        }
+
+        .gear-right {
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 15px solid #e74c3c;
+            right: 25px;
+            top: 75px;
+        }
+
+        .gear-right:before {
+            content: '';
+            position: absolute;
+            width: 180px;
+            height: 180px;
+            top: -15px;
+            left: -15px;
+            border-radius: 50%;
+            box-sizing: border-box;
+            border: 15px dashed #e74c3c;
+            border-style: solid;
+            clip-path: polygon(
+                0 40%, 10% 40%, 20% 0, 30% 40%, 40% 40%, 50% 0,
+                60% 40%, 70% 40%, 80% 0, 90% 40%, 100% 40%, 100% 60%,
+                90% 60%, 80% 100%, 70% 60%, 60% 60%, 50% 100%,
+                40% 60%, 30% 60%, 20% 100%, 10% 60%, 0 60%
+            );
+        }
+
+        .wrench {
+            position: absolute;
+            width: 40px;
+            height: 120px;
+            background-color: #ffffff;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%) rotate(45deg);
+            clip-path: polygon(
+                30% 0, 70% 0, 70% 30%, 100% 30%, 100% 70%, 70% 70%,
+                70% 100%, 30% 100%, 30% 70%, 0 70%, 0 30%, 30% 30%
+            );
+            z-index: 10;
+        }
+
+        .company-name {
+            font-size: 48px;
+            font-weight: bold;
+            color: #e74c3c;
+            margin-top: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .tagline {
+            font-size: 18px;
+            color: #d6d6d6;
+            margin-top: 10px;
+            letter-spacing: 1px;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 600px) {
+            .logo {
+                width: 200px;
+                height: 200px;
+            }
+
+            .gear-left, .gear-right {
+                width: 100px;
+                height: 100px;
+            }
+
+            .gear-left:before, .gear-right:before {
+                width: 130px;
+                height: 130px;
+            }
+
+            .company-name {
+                font-size: 32px;
+            }
+
+            .tagline {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="logo-container">
+        <div class="logo">
+            <div class="gear-left"></div>
+            <div class="gear-right"></div>
+            <div class="wrench"></div>
+        </div>
+        <div class="company-name">CAMLO INDUSTRIES</div>
+        <div class="tagline">ENGINEERING EXCELLENCE</div>
+    </div>
+</body>
+</html>
